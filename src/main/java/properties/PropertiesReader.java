@@ -10,12 +10,12 @@ public class PropertiesReader {
 
     public Properties properties;
 
-    public PropertiesReader(){
+    public PropertiesReader() {
         properties = new Properties();
         String environment = BaseProperties.QA_env;
         Reporter.log("ENVIRONMENT: " + BaseProperties.QA_env, true);
 
-        String propertiesFilePath = environment+".properties";
+        String propertiesFilePath = environment + ".properties";
         InputStream inputStream = this.getClass().getClassLoader().getResourceAsStream(propertiesFilePath);
 
         try {

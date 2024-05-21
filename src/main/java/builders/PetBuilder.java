@@ -2,7 +2,6 @@ package builders;
 
 import petstore_client.pet.add_new_pet_to_store.AddNewPetRequestBody;
 import petstore_entities.Category;
-import petstore_entities.Tag;
 import utils.RestUtils;
 
 import java.util.Arrays;
@@ -15,21 +14,27 @@ public class PetBuilder {
     Category category;
 
     CategoryBuilder categoryBuilder;
-    List<Map<String,Object>> tag;
+    List<Map<String, Object>> tag;
     TagBuilder tagBuilder;
 
-    public PetBuilder(){
+    public PetBuilder() {
         addNewPetRequestBody = new AddNewPetRequestBody();
 
         categoryBuilder = new CategoryBuilder();
+        category = categoryBuilder.build();
+
         tagBuilder = new TagBuilder();
         tag = new TagBuilder().build();
 
-        addNewPetRequestBody.setName(restUtils.getPet_name());
-        addNewPetRequestBody.setPhotoUrls(Arrays.asList("in occaecat","mollit ullamco et dolore nisi"));
-        addNewPetRequestBody.setId(restUtils.getId());
-        addNewPetRequestBody.setCategory(categoryBuilder.build());
+        addNewPetRequestBody.setName("Jaadu");
+        addNewPetRequestBody.setPhotoUrls(Arrays.asList("in occaecat", "mollit ullamco et dolore nisi"));
+        addNewPetRequestBody.setId(-93576091);
+        addNewPetRequestBody.setCategory(category);
         addNewPetRequestBody.setTags(tag);
         addNewPetRequestBody.setStatus("pending");
+    }
+
+    public AddNewPetRequestBody build() {
+        return addNewPetRequestBody;
     }
 }

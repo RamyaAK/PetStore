@@ -113,7 +113,8 @@
 
         <dependency>
             <groupId>com.github.automatedowl</groupId>
-            <artifactId>allure-environment-writer</artifactId><version>1.0.0</version>
+            <artifactId>allure-environment-writer</artifactId>
+            <version>1.0.0</version>
         </dependency>
 
         <!-- how to generate allure reports : steps: 1.brew install allure then 2. run all tests then 3. type "allure serve allure-results" enter-->

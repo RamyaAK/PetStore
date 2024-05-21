@@ -27,15 +27,15 @@ public class RestUtils {
 
 
     public void setTagId(String tagId) {
-        this.tagId = 1+generatedInteger;
+        this.tagId = 1 + generatedInteger;
     }
 
     public void setTagName(String tagName) {
-        this.tagName = "J"+generatedString;
+        this.tagName = "J" + generatedString;
     }
 
     public void setPet_name(String pet_name) {
-        this.pet_name = "Jaadu"+generatedString;
+        this.pet_name = "Jaadu" + generatedString;
     }
 
     public void setPhotoUrls(List<String> photoUrls) {

@@ -1,9 +1,7 @@
 package petstore_client.pet.add_new_pet_to_store;
 
 import petstore_entities.Category;
-import petstore_entities.Tag;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -12,7 +10,7 @@ public class AddNewPetRequestBody {
     public List<String> photoUrls;
     public int id;
     public Category category;
-    public List<Map<String,Object>> tags;
+    public List<Map<String, Object>> tags;
     public String status;
 
 
