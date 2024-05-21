@@ -20,7 +20,7 @@ public class AddNewPetToStoreTests extends BaseTest {
 
     @BeforeTest
     public void initialSteps() {
-        // prepare Test Data or request Payload for testing
+        // prepare Test Data or request Payload creation for testing
         addNewPetRequestBody = new PetBuilder().build();
         System.out.println(addNewPetRequestBody.toString());
     }
@@ -40,10 +40,14 @@ public class AddNewPetToStoreTests extends BaseTest {
         Assert.assertEquals(addNewPetResponseBody.getTags().get(1).getId(),addNewPetRequestBody.getTags().get(1).get("id"));
         Assert.assertEquals(addNewPetResponseBody.getTags().get(1).getName(),addNewPetRequestBody.getTags().get(1).get("name"));
         Assert.assertEquals(addNewPetResponseBody.getStatus(),"pending");
+
     }
 
     @AfterTest
     public void closeTest() {
+        System.out.println("added pet id is = "+addNewPetResponseBody.getId());
+        pet.setId(addNewPetResponseBody.getId());
+        System.out.println(pet.getId());
         System.out.println("Closing the Test!");
     }
 

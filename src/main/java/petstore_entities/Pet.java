@@ -1,18 +1,18 @@
 package petstore_entities;
 
 public class Pet {
-    int id;
+    long id;
     Category category;
     String name;
     String photoUrls;
     Tag tags;
     String status;
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
